@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, input } from '@angular/core';
+import { Person } from 'src/app/shared/interfaces/person';
 
 @Component({
   selector: 'app-person-table',
@@ -9,10 +10,5 @@ import { Component } from '@angular/core';
 })
 export class PersonTableComponent {
   name = 'Alexandros';
-  person = {
-    givenName: 'Alexandros',
-    surName: 'Michailovits',
-    age: 29,
-    email: 'alexandros_bm2@yahoo.com'
-  }
+  @Input() person: Person | undefined;
 }
